@@ -492,30 +492,64 @@ function selectContainerElement() {
   const containerElement = document.getElementById("container");
   return containerElement;
 }
+
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
+function selectCelleTabella() {
+  let tableCells = document.querySelectorAll("td");
+  return celleTabella;
+}
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+function printCelleTabella() {
+  let celleTabella = document.querySelectorAll("td");
+  celleTabella.forEach(function (td) {
+    console.log(td.textContent);
+  });
+}
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
 */
 
+function addColoreBackgroundRosso() {
+  let links = document.querySelectorAll("a");
+  links.forEach(function (link) {
+    link.style.backgroundColor = "red";
+  });
+}
+
 /* ESERCIZIO 24
   Scrivi una funzione per aggiungere un nuovo elemento alla lista non ordinata con id "myList".
 */
+function addToMyList(nuovoElementoTestuale) {
+  let nuovoElemento = document.createElement("li");
+  nuovoElemento.textContent = nuovoElementoTestuale;
+  let list = document.getElementById("myList");
+  list.appendChild(nuovoElemento);
+}
 
 /* ESERCIZIO 25
   Scrivi una funzione per svuotare la lista non ordinata con id "myList".
 */
 
+function cleanMyList() {
+  let list = document.getElementById("myList");
+  list.innerHTML = "";
+}
+
 /* ESERCIZIO 26
   Scrivi una funzione per aggiungere ad ogni tag <tr> la classe CSS "test"
 */
-
+function addClassColonneTabella() {
+  let colonneTabella = document.querySelectorAll("tr");
+  colonneTabella.forEach(function (tr) {
+    tr.classList.add("test");
+  });
+}
 // [EXTRA] JS Avanzato
 
 /* ESERCIZIO 27
