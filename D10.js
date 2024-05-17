@@ -110,7 +110,7 @@ function deleteOne(stringa, trueFalse) {
   if (trueFalse) {
     return stringa.slice(1);
   } else {
-    return stringa.slice(0, 1);
+    return stringa.slice(0, -1);
   }
 }
 
