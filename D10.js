@@ -139,6 +139,25 @@ console.log(onlyLetters("I have 4 dogs"));
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
+function isThisAnEmail(stringa) {
+  let chiocciola = false;
+  let punto = false;
+
+  for (let i = 0; i < stringa.length; i++) {
+    if (stringa[i] === "@") {
+      chiocciola = true;
+    } else if (chiocciola && stringa[i] === ".") {
+      punto = true;
+      break;
+    }
+  }
+
+  return chiocciola && punto;
+}
+
+console.log(isThisAnEmail("giovanni@storti.com"));
+console.log(isThisAnEmail("giovanni.@storti.com"));
+
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
