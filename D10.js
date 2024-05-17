@@ -123,6 +123,18 @@ console.log(deleteOne("ciao", false));
   Es.: onlyLetters("I have 4 dogs") => ritorna "I have dogs"
 */
 
+function onlyLetters(stringa) {
+  let conversione = ""; // con const non andava, mi dava messaggio : Assignment to constant variable.
+  for (let i = 0; i < stringa.length; i++) {
+    if (stringa[i] < "0" || stringa[i] > "9") {
+      conversione += stringa[i];
+    }
+  }
+  return conversione;
+}
+
+console.log(onlyLetters("I have 4 dogs"));
+
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
