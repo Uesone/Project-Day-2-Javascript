@@ -156,11 +156,25 @@ function isThisAnEmail(stringa) {
 }
 
 console.log(isThisAnEmail("giovanni@storti.com"));
-console.log(isThisAnEmail("giovanni.@storti.com"));
+console.log(isThisAnEmail("giovanni.@storti.com")); //so che non è ottimale ma è l'unico modo che mi è venuto in mente.
 
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+function whatDayIsIt() {
+  const giorniSettimana = [
+    "Domenica",
+    "Lunedì",
+    "Martedì",
+    "Mercoledì",
+    "Giovedì",
+    "Venerdì",
+    "Sabato",
+  ];
+  return giorniSettimana[new Date().getDay()];
+}
+
+console.log(whatDayIsIt());
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
@@ -182,7 +196,22 @@ console.log(isThisAnEmail("giovanni.@storti.com"));
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+function isTodayMyBirthday() {
+  const dataDiOggi = new Date();
+  const giornoDiOggi = dataDiOggi.getDate();
+  const meseCorrente = dataDiOggi.getMonth() + 1;
+  const giornoCompleanno = 12;
+  const meseCompleanno = 5;
+  return dataDiOggi === giornoCompleanno && meseCorrente === meseCompleanno;
+}
 
+if (isTodayMyBirthday()) {
+  console.log("Buon compleanno!");
+} else {
+  console.log("Oggi non è il tuo compleanno.");
+}
+
+console.log(isTodayMyBirthday());
 // Arrays & Oggetti
 
 // NOTA: l'array "movies" usato in alcuni esercizi è definito alla fine di questo file
