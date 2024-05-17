@@ -100,10 +100,22 @@ function splitMe(stringa) {
 x = splitMe("i love coding");
 
 console.log(x);
+
 /* ESERCIZIO 4
   Crea una funzione chiamata "deleteOne" che riceve una stringa e un booleano come parametri.
   Se il valore booleano è true la funzione deve ritornare la stringa senza il primo carattere, altrimenti la deve ritornare senza l'ultimo.
 */
+
+function deleteOne(stringa, trueFalse) {
+  if (trueFalse) {
+    return stringa.slice(1);
+  } else {
+    return stringa.slice(0, 1);
+  }
+}
+
+console.log(deleteOne("ciao", true));
+console.log(deleteOne("ciao", false));
 
 /* ESERCIZIO 5
   Crea una funzione chiamata "onlyLetters" che riceve una stringa come parametro e la ritorna eliminando tutte le cifre numeriche.
