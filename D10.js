@@ -210,7 +210,7 @@ console.log(prova);
 */
 
 function splitMe(stringa) {
-  return stringa.split("");
+  return stringa.split(" ");
 }
 
 x = splitMe("i love coding");
