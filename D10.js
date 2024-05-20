@@ -321,7 +321,7 @@ function rollTheDices(numRolls) {
   };
 }
 
-const rollResult = rollTheDices();
+const rollResult = rollTheDices(5);
 console.log(rollResult.sum);
 console.log("Valore Roll", rollResult.values);
 
